@@ -1,32 +1,25 @@
 import random
 from getpass import getpass
-
 def rps(p1,p2):
     if p1!="paper" and p1!="rock" and p1!="scissor" or p2!="paper" and p2!="rock" and p2!="scissor":
         return 1
-    else:
-        if(p1==p2):
+    elif(p1==p2):
             return 2
-        else:
-            if p2=="rock":
+    elif p2=="rock":
                 if p1=="paper":
                     return 3
                 if p1=="scissor":
                     return 4        
-            else:
-                if p2=="paper":
+    elif p2=="paper":
                     if p1=="rock":
                         return 4  
                     if p1=="scissor":
                         return 3
-                else:
-                    if p2=="scissor":
+    elif p2=="scissor":
                         if p1=="rock":
                             return 3 
                         if p1=="paper":
                             return 4
-                            
-                            
 p1_name=input("Enter your name ")
 print("Bot: Hi",p1_name,"!")
 print("Bot: Ready to play rock ,paper and scissors !")
@@ -43,11 +36,13 @@ if true=="yes" or true=="y":
         p2_name=""
         winner_name=""
         if mode=="c":
+            print("Bot: You chose 1st mode")
             l=["rock","paper","scissor"]
             p2_name="Bot"
             print("Bot: I have entered ,it's your turn")
             p2=random.choice(l)
         else:
+            print("Bot: You chose 2nd mode")
             p2_name=input("Bot: Enter second player name ")
             p2=getpass(p2_name+": ")
             p2=p2.lower()
@@ -55,13 +50,13 @@ if true=="yes" or true=="y":
         p1=p1.lower()
         result=rps(p1,p2)
         if result==1:
-            print("Wrong input")
+            print("Wrong input\n\n\n\n")
         elif result==2:
-            print("Game tied")
+            print("Game tied\n\n\n\n")
         elif result==3:
-            print(p1_name,"is the winner!!")
+            print(p1_name,"is the winner!!\n\n\n\n")
         else:
-            print(p2_name,"is the winner!!")
+            print(p2_name,"is the winner!!\n\n\n\n")
         print("Bot: Do you want to play again",p1_name)
         print("Bot: for yes(y) and for no(n)")
         ag=input(p1_name+": ")
@@ -74,5 +69,5 @@ if true=="yes" or true=="y":
 elif true=="no" or true=="n":
     print("Bot: Ok, we'll play next time if you want")
 else:
-    print("invalid string",p1_name)
+    print("invalid")
            
