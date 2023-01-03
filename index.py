@@ -1,7 +1,7 @@
 import random #using random helps to make the computer choose something random 
 from getpass import getpass #getpass is used to hide the input from the first player
 def rps(p1,p2): #using function to make the program more clear
-    if p1!="paper" and p1!="rock" and p1!="scissor" or p2!="paper" and p2!="rock" and p2!="scissor": #this is the game logic ,about printing the winner or game tied
+    if p1!="paper" and p1!="rock" and p1!="scissor" or p2!="paper" and p2!="rock" and p2!="scissor": #this is the game logic ,about printing the winner, game tied or wrong input
         return 1
     elif(p1==p2):
             return 2
